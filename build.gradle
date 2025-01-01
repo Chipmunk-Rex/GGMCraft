@@ -18,6 +18,7 @@ repositories {
 }
 
 dependencies {
+    implementation("net.dv8tion:JDA:5.2.2")
     compileOnly("io.papermc.paper:paper-api:1.21.3-R0.1-SNAPSHOT")
 }
 
@@ -37,6 +38,10 @@ tasks.withType(JavaCompile).configureEach {
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release.set(targetJavaVersion)
     }
+}
+tasks.jar{
+    archiveFileName = 'GGMCraft.jar'
+    destinationDirectory = file('C:\\Users\\msi\\Documents\\ServerEngine\\servers\\server_818280382\\plugins')
 }
 
 processResources {

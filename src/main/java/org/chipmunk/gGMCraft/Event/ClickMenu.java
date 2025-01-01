@@ -1,4 +1,6 @@
 package org.chipmunk.gGMCraft.Event;
 
-public class ClickMenu {
+import org.bukkit.event.Listener;
+
+public class ClickMenu extends GGMCraftLister {
 }
