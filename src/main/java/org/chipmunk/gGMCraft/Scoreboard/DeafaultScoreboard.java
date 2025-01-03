@@ -13,6 +13,7 @@ public class DeafaultScoreboard {
 
     public void ResetScoreBoard(Player player) {
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
+
     }
 
     public static void SetDefaultScoreboard() {
@@ -22,9 +23,10 @@ public class DeafaultScoreboard {
     }
 
     private static @NotNull Objective CreateOnNotExist(Scoreboard scoreboard, String string) {
-        Objective objective =   scoreboard.getObjective(string);
+        Objective objective = scoreboard.getObjective(string);
         if (objective == null) {
             objective = scoreboard.registerNewObjective(string, Criteria.AIR, "3", RenderType.HEARTS);
+
         }
         return objective;
     }
